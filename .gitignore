@@ -1,0 +1,53 @@
+*.pyc
+__pycache__/
+*.pyo
+*.pyc
+*.pyd
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.git/
+.mypy_cache/
+.pytest_cache/
+
+# Virtual environment
+env/
+venv/
+ENV/
+venv.bak/
+venv_backup/
+Lib/
+Scripts/
+include/
+pyvenv.cfg
+
+# IDE
+.idea/
+.vscode/
+.vs/
+*.swp
+*.swo
+
+# Django
+db.sqlite3
+db.sqlite3-journal
+/static/
+/media/
+
+# Env variables (secrets)
+.env
+.env.*
+
+# OS
+.DS_Store
+Thumbs.db
+
+ht.zip

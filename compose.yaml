@@ -1,0 +1,45 @@
+services:
+
+  db:
+    image: postgres:16
+
+    environment:
+      POSTGRES_DB: habittracker
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+    ports:
+      - "5432:5432"
+
+  web:
+    build: .
+
+    volumes:
+      - static_volume:/app/staticfiles
+      - .:/app
+
+    ports:
+      - "8000:8000"
+
+    depends_on:
+      - db
+
+  nginx:
+    image: nginx:latest
+
+    ports:
+      - "80:80"
+
+    volumes:
+      -  static_volume:/app/staticfiles
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:roу
+
+    depends_on:
+      - web
+
+volumes:
+  postgres_data:
+  static_volume:
