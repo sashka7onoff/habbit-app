@@ -21,6 +21,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '195.209.213.245', 'habits-app.ru', 'www.habits-app.ru']
 
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+CSRF_TRUSTED_ORIGINS = ['https://habits-app.ru', 'https://www.habits-app.ru']
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
