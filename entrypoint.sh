@@ -11,6 +11,7 @@ django.setup()
 from django.db import connection
 connection.ensure_connection()
 print('Database connection successful')
+
 " > /dev/null 2>&1; do
   echo "Database is not ready yet... waiting"
   sleep 2

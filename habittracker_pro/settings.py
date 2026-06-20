@@ -19,7 +19,7 @@ SECRET_KEY = 'django-insecure--CHANGE-ME-IN-PRODUCTION--replace-with-secure-key!
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '89.124.109.253', 'habits-app.ru', 'www.habits-app.ru']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '195.209.213.245', 'habits-app.ru', 'www.habits-app.ru']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
