@@ -19,9 +19,6 @@ done
 
 echo "Database is ready!"
 
-
-echo "Database is ready!"
-
 echo "Applying migrations..."
 python manage.py migrate
 
